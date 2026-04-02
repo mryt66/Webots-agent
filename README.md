@@ -1,3 +1,5 @@
+Demo: https://www.youtube.com/watch?v=uTdEIKzpsZk
+
 ## Webots Agent (PR2 Sandbox + GenAI Planner)
 
 This project is a small robotics sandbox built on Webots for repeatable experiments with a PR2 robot. The simulation is deterministic (fixed world + fixed top-down observation), but each run introduces variability by randomizing the can position from a fixed set of valid table locations.
