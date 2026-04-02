@@ -1,0 +1,66 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/clearpath/pr2/protos/Pr2.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/tables/protos/Table.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/drinks/protos/Can.proto"
+
+WorldInfo {
+  info [
+    "Willow Garage PR2 robot."
+    "The robot model includes 44 actuated joints, 6 cameras and 2 laser-scanners."
+  ]
+  title "PR2"
+  basicTimeStep 16
+  contactProperties [
+    ContactProperties {
+      material2 "pr2_material"
+      softCFM 1e-05
+    }
+  ]
+}
+DEF VIEWPOINT Viewpoint {
+  fieldOfView 0.3
+  orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.09
+  position 0 0 12
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+  castShadows FALSE
+}
+Pr2 {
+  translation 0 0.1 0
+  controller "my_controller"
+  supervisor TRUE
+}
+Floor {
+  tileSize 1 1
+  appearance Parquetry {
+    type "dark strip"
+    IBLStrength 0
+  }
+}
+DEF CAN Can {
+  translation 1.13 -0.085 0.801
+}
+DEF TABLE_X_POS Table {
+  translation 1.5 0 0
+}
+DEF TABLE_X_NEG Table {
+  translation -1.5 0 0
+  name "table(3)"
+}
+DEF TABLE_Y_POS Table {
+  translation 0 1.5 0
+  rotation 0 0 1 1.5707963267948966
+  name "table(1)"
+}
+DEF TABLE_Y_NEG Table {
+  translation 0 -1.4 0
+  rotation 0 0 1 1.5707963267948966
+  name "table(2)"
+}

@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+
+.venv/
+.env
+conf/config.yaml
+
+controllers/my_controller/logs/
+controllers/my_controller/captures/

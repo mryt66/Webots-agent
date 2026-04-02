@@ -1,0 +1,4 @@
+env:
+  GEMINI_API_KEY: ''
+  GEMINI_MODEL: 'gemini-3-flash-preview'
+  WEBOTS_API_BASE: 'http://127.0.0.1:8000'
